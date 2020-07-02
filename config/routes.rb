@@ -12,7 +12,10 @@ Rails.application.routes.draw do
     get "/url_segment_param/:dan" => "examples#segment_example"
 
     get "/number_segment/:my_guess" => "examples#guess"
+    post "/guess_number_body" => "examples#guess"
 
     post "/body_params_url" => "examples#body_params"
+
+    post "/security" => "examples#user_password"
   end
 end
