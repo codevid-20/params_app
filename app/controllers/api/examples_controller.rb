@@ -15,9 +15,11 @@ class Api::ExamplesController < ApplicationController
   end
 
   def guess
+    params['my_guess']
+
     correct_answer = 32
     # take in the user guess
-    user_guess = params['guess'].to_i
+    user_guess = params['my_guess'].to_i
 
     if user_guess > correct_answer
       @message = "You guessed too high"
@@ -35,5 +37,9 @@ class Api::ExamplesController < ApplicationController
   def segment_example
     @state = params['dan']
     render 'segment.json.jb'
+  end
+
+  def body_params
+    render 'body.json.jb'
   end
 end
