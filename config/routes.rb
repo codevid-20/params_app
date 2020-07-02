@@ -10,5 +10,7 @@ Rails.application.routes.draw do
     get "/guess_a_number" => "examples#guess"
 
     get "/url_segment_param/:dan" => "examples#segment_example"
+
+    get "/number_segment/:guess" => "examples#guess"
   end
 end
