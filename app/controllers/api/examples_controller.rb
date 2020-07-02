@@ -40,6 +40,10 @@ class Api::ExamplesController < ApplicationController
   end
 
   def body_params
+    
+    # params = {"city"=>"buffalo"}
+    
+    @city = params[:city]
     render 'body.json.jb'
   end
 end
