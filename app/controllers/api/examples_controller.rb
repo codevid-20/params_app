@@ -13,4 +13,22 @@ class Api::ExamplesController < ApplicationController
     
     render 'the_name.json.jb'
   end
+
+  def guess
+    correct_answer = 32
+    # take in the user guess
+    user_guess = params['guess'].to_i
+
+    if user_guess > correct_answer
+      @message = "You guessed too high"
+    elsif user_guess < correct_answer
+      @message = "You guessed too low"
+    else
+      @message = "You guessed correctly. wahooo!"
+    end
+    # compare it to 32
+    # depending on that comparison, show the user a different message
+    
+    render 'guess_number.json.jb'
+  end
 end
