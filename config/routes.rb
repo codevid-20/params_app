@@ -8,5 +8,7 @@ Rails.application.routes.draw do
     get "/name_route" => "examples#say_name"
 
     get "/guess_a_number" => "examples#guess"
+
+    get "/url_segment_param/:dan" => "examples#segment_example"
   end
 end

@@ -31,4 +31,9 @@ class Api::ExamplesController < ApplicationController
     
     render 'guess_number.json.jb'
   end
+
+  def segment_example
+    @state = params['dan']
+    render 'segment.json.jb'
+  end
 end
