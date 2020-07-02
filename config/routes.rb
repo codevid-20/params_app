@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   # EXAMPLE JSON ROUTE WITH API NAMESPACE
   namespace :api do
     get "/query_params_example" => "examples#query_param"
+    get "/name_route" => "examples#say_name"
   end
 end
